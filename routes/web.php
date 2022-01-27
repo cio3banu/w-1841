@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $grupa="W-1841";
+    $specialitatea="Administrarea aplicatiilor web";
+    
+    return view('welcome', ['grupa' => $grupa, 'specialitatea'=>$specialitatea]);});
+
+Route::get('/about', function () {return view('about');});
+
+Route::get('/contacts', function () {return view('contacts');});
