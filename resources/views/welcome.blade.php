@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Home page</h1>
+@extends('layouts')
+
+@section('content')
     
+
+    <h1>Home page</h1>
+    @foreach ($grupe as $grupa)
+        
+    @if ($grupa=="W-1841") {{"Grupa W-1841 este bravo"}}
+        
+    @else
     <p>Grupa: <strong>{{$grupa}}</strong> </p>
+    @endif
+    @endforeach
+    
+    
     <p>Specialitatea: <strong>{{$specialitatea}}</strong> </p>
        
     <ul>
 <li><a href="/about">About</a></li>
 <li><a href="/contacts">Contacts</a></li>
     </ul>
-</body>
-</html>
+@endsection

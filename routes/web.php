@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $grupa="W-1841";
+    $grupe=['W-1841', 'W-1842','P-1841','P-1842','P-1843R','R-1841'];
     $specialitatea="Administrarea aplicatiilor web";
     
-    return view('welcome', ['grupa' => $grupa, 'specialitatea'=>$specialitatea]);});
+    return view('welcome', ['grupe' => $grupe, 'specialitatea'=>$specialitatea]);});
 
 Route::get('/about', function () {return view('about');});
 
