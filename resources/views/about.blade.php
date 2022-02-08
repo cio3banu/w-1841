@@ -1,10 +1,7 @@
 @extends('layouts')
-
+@section('title','About page')
 @section('content')
    
-    <h1>About page</h1>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/contacts">Contacts</a></li>
-            </ul>
+  <h1>About page</h1>
+  
 @endsection
