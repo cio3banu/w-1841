@@ -1,7 +1,8 @@
 <?php
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PhotoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [TestController::class, 'index']);
 
-//Route::get('/home', 'TestController@index');
+//Route::get('/home', 'App\Http\Controllers\TestController@index');
 
 Route::get('/about', [TestController::class, 'about']);
 
@@ -28,3 +29,6 @@ Route::get('/ceva', [TestController::class, 'ceva']);
 
 Route::get('user/{id}', [TestController::class, 'userid']);
 
+Route::name('home')->get('/', [MyController::class, 'index']);
+
+Route::resource('photos', PhotoController::class);
