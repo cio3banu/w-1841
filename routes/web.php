@@ -3,6 +3,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,7 @@ use App\Http\Controllers\PhotoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/home', [TestController::class, 'index']);
 
 //Route::get('/home', 'App\Http\Controllers\TestController@index');
@@ -32,3 +33,5 @@ Route::get('user/{id}', [TestController::class, 'userid']);
 Route::name('home')->get('/', [MyController::class, 'index']);
 
 Route::resource('photos', PhotoController::class);
+*/
+Route::get('/article', [ArticleController::class, 'index']);
