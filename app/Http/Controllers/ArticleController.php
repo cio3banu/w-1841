@@ -14,6 +14,6 @@ class ArticleController extends Controller
         //$articles=Article::all();
         $articles = DB::select('select * from articles');
         //return $articles;
-        return view('page')->with('articles', $articles);
+        return view('article')->with('articles', $articles);
     }
 }
