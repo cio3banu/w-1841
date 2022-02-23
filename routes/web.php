@@ -34,4 +34,10 @@ Route::name('home')->get('/', [MyController::class, 'index']);
 
 Route::resource('photos', PhotoController::class);
 */
+
+//Article
 Route::get('/article', [ArticleController::class, 'index']);
+
+Route::get('/article/add', [ArticleController::class, 'add']);
+
+Route::post('/article/add', [ArticleController::class, 'store']) ->name('articleStore');
