@@ -21,7 +21,7 @@ public function add(){
 }
 
 public function store(Request $request){
-    $request->dump();
+    //$request->dump();
     $this->validate($request,[
         'title'=>'required|max:50',
         'description'=>'required|max:250',
